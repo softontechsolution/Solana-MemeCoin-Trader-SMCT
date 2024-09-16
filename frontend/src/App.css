@@ -1,38 +1,210 @@
-.App {
-  text-align: center;
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header and Navigation */
+header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 0;
+  background-color: #282c34;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header h1 {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav button {
+  background-color: #61dafb;
+  border: none;
+  color: #282c34;
+  padding: 10px 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav button:hover {
+  background-color: #21a1f1;
+}
+
+nav button:focus {
+  outline: none;
+}
+
+/* Main Content Layout */
+main {
+  margin-top: 20px;
+}
+
+/* Dashboard Styles */
+.chart-container {
+  margin-top: 20px;
+}
+
+.line-chart {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Trade Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form select {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #21a1f1;
+}
+
+/* Portfolio Styles */
+.portfolio-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.portfolio-list li {
+  padding: 10px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Settings Styles */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-container label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.settings-container input {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.settings-container button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.settings-container button:hover {
+  background-color: #21a1f1;
+}
+
+/* Responsive Design */
+
+/* Medium Devices (Tablets, etc.) */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .settings-container {
+    max-width: 100%;
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px;
+  }
+
+  nav button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  form label, .settings-container label {
+    font-size: 14px;
+  }
+
+  form button, .settings-container button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .portfolio-list li {
+    padding: 8px;
+  }
+
+  main {
+    margin-top: 10px;
   }
 }
